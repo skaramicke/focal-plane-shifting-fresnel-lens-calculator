@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresnel Lens Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fresnel Lens Calculator</h1>
+        
+        <div class="input-container">
+            <h2>Input Parameters</h2>
+            <div>
+                <label for="original-size">Original Focal Plane Size (mm):</label>
+                <input type="number" id="original-size" value="56" min="1" step="0.1">
+                <span>Hasselblad 500c/m film diagonal</span>
+            </div>
+            <div>
+                <label for="target-size">Target Focal Plane Size (mm):</label>
+                <input type="number" id="target-size" value="21.5" min="1" step="0.1">
+                <span>Sony QX-1 sensor diagonal</span>
+            </div>
+            <div>
+                <label for="distance">Distance Between Focal Planes (mm):</label>
+                <input type="number" id="distance" value="50" min="10" step="1">
+            </div>
+            <div>
+                <label for="lens-separation">Manual Lens Separation (mm):</label>
+                <input type="number" id="lens-separation" value="0" min="0" step="1">
+                <span>(0 = auto calculate)</span>
+            </div>
+            <button id="calculate-btn">Calculate</button>
+            <div id="error-message" class="error"></div>
+        </div>
+        
+        <div class="results-container">
+            <h2>Calculated Results</h2>
+            <div id="results" class="result-column">
+                <p>Focal Length of Lens 1: <span id="focal-length-1" class="result-value">-</span> mm</p>
+                <p>Focal Length of Lens 2: <span id="focal-length-2" class="result-value">-</span> mm</p>
+                <p>Distance Between Lenses: <span id="lens-distance" class="result-value">-</span> mm</p>
+                <p>Magnification: <span id="magnification" class="result-value">-</span>×</p>
+            </div>
+            <div class="result-column">
+                <p>Diameter of Lens 1: <span id="lens1-diameter" class="result-value">-</span> mm</p>
+                <p>Diameter of Lens 2: <span id="lens2-diameter" class="result-value">-</span> mm</p>
+                <p>F-number of Lens 1: <span id="f-number-1" class="result-value">-</span></p>
+                <p>F-number of Lens 2: <span id="f-number-2" class="result-value">-</span></p>
+            </div>
+        </div>
+        
+        <div class="visualization-container">
+            <h2>System Visualization</h2>
+            <div class="slider-container">
+                <label for="target-position">Target Position (mm):</label>
+                <input type="range" id="target-position" min="10" max="300" value="100" step="1">
+                <span id="target-position-value">100</span> mm
+            </div>
+            <div class="canvas-container">
+                <canvas id="visualization" width="850" height="350"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core System -->
+    <script src="js/system.js"></script>
+    <script src="js/calculator.js"></script>
+    
+    <!-- Visualization -->
+    <script src="js/visualization/canvas.js"></script>
+    <script src="js/visualization/drawLens.js"></script>
+    <script src="js/visualization/drawPlanes.js"></script>
+    <script src="js/visualization/drawMeasurements.js"></script>
+    
+    <!-- Main Application -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
