@@ -1,0 +1,54 @@
+# Cursor AI Coding Rules
+
+# Code Quality and Documentation
+1. Keep code clean, readable, and well-documented
+2. Add meaningful comments for complex logic
+3. Follow consistent naming conventions
+4. Break down complex functions into smaller, manageable pieces
+5. Use descriptive variable and function names
+
+# Version Control
+1. Write clear, descriptive commit messages
+2. Make small, focused commits
+3. Keep feature branches up to date with main
+4. Review changes before committing
+
+# Documentation
+1. Update README.md with any new features or changes
+2. Document API changes and new dependencies
+3. Keep documentation synchronized with code changes
+4. Include examples for new functionality
+
+# Testing and Linting
+1. Run trunk check before committing changes:
+   ```bash
+   trunk check
+   ```
+2. Fix any linting issues before pushing
+3. Write tests for new functionality
+4. Ensure all tests pass before merging
+
+# Code Review
+1. Review generated code carefully
+2. Verify logic and edge cases
+3. Check for security implications
+4. Ensure consistent error handling
+5. Validate type safety where applicable
+
+# Project Structure
+1. Maintain organized file structure
+2. Keep related code together
+3. Follow project architecture patterns
+4. Use appropriate file naming conventions
+
+# Security
+1. Review dependencies for vulnerabilities
+2. Validate input data
+3. Handle errors appropriately
+4. Follow security best practices
+
+# Performance
+1. Consider algorithmic complexity
+2. Optimize resource usage
+3. Monitor memory consumption
+4. Profile code when necessary
